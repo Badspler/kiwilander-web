@@ -24,4 +24,4 @@ jobs:
           sudo pip3 install awscli
       - name: Upload files to S3
         run: |
-          aws s3 sync . s3://my-bucket-name --delete
+          aws s3 sync . s3://${{ secrets.AWS_BUCKET }} --delete
